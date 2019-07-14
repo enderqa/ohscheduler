@@ -204,7 +204,7 @@ then
                                 logInfo('temperature-control.rules', 'Target temperature for item ' + targetItem.name
                                     + ' changed from ' + targetItem.state
                                     + ' to ' + DecimalType.valueOf(itemsTempArray.get(j.intValue()).split('=').get(1)))
-                                targetItem.postUpdate(DecimalType.valueOf(itemsTempArray.get(j.intValue()).split('=').get(1)))
+                                targetItem.sendCommand(DecimalType.valueOf(itemsTempArray.get(j.intValue()).split('=').get(1)))
                             }
                         }
                     }
